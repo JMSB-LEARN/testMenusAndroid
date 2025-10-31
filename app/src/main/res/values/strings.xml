@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">menusTest_JMSB</string>
+    <string name="btn_pokemon" translatable="false">Pokemon</string>
+    <string name="btn_digimon" translatable="false">Digimon</string>
+
+    <string name="app_name">Menus JMSB</string>
+    <string name="main_fragment">Main Menu</string>
+    <string name="btn_rookie">Rockie</string>
+    <string name="btn_champion">Champion</string>
+    <string name="btn_mega">Mega</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,6 +1,5 @@
 package com.example.menustest_jmsb;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,30 +10,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.menustest_jmsb.databinding.FragmentMainBinding;
+import com.example.menustest_jmsb.databinding.FragmentMegaBinding;
 
 
-public class MainFragment extends Fragment {
+public class MegaFragment extends Fragment {
 
     // Binding del fragment
-    FragmentMainBinding binding;
+    FragmentMegaBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentMainBinding.inflate(inflater, container, false);
+        // Inicializamos el binding inflando el layout
+        binding = FragmentMegaBinding.inflate(inflater, container, false);
+
+        // Devolvemos la vista raíz del binding
         return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.btnDigi.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), DigimonActivity.class);
-            startActivity(intent);
-        });
-        binding.btnPoke.setOnClickListener(v -> {
-            Intent intent = new Intent(requireContext(), PokemonActivity.class);
-            startActivity(intent);
-        });
+
+        // Aquí podemos acceder a las vistas (botones, textos, etc.)
     }
 }

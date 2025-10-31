@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/digimon_nav_graph"
+    app:startDestination="@id/rookieFragment">
+
+    <fragment
+        android:id="@+id/rookieFragment"
+        android:name="com.example.menustest_jmsb.RookieFragment"
+        android:label="@string/btn_rookie"
+        tools:layout="@layout/fragment_rookie" />
+    <fragment
+        android:id="@+id/championFragment"
+        android:name="com.example.menustest_jmsb.ChampionFragment"
+        android:label="@string/btn_champion"
+        tools:layout="@layout/fragment_champion" />
+    <fragment
+        android:id="@+id/megaFragment"
+        android:name="com.example.menustest_jmsb.MegaFragment"
+        android:label="@string/btn_mega"
+        tools:layout="@layout/fragment_mega" />
+</navigation>
