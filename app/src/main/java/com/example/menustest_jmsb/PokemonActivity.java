@@ -10,6 +10,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.menustest_jmsb.databinding.ActivityPokemonBinding;
 
+import java.util.Objects;
+
 
 public class PokemonActivity extends AppCompatActivity {
     ActivityPokemonBinding binding;
@@ -25,16 +27,17 @@ public class PokemonActivity extends AppCompatActivity {
         setSupportActionBar(binding.toolbar);
 
         // 2. Obtenemos el NavController
-        navController = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).getNavController();
+        navController = ((NavHostFragment) Objects.requireNonNull(getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment))).getNavController();
 
         // 3. Configuramos la AppBar con los destinos principales (bottom menu)
         // Los fragments que pongamos aquí se consideran top-level destinations
         // Esto quiere decir en ellas no hay botón de back porque no se llegó desde otra,
         // sino que se accede directamente desde el menú
         appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.homeFragment,
-                R.id.favoritesFragment,
-                R.id.profileFragment
+                R.id.waterFragment,
+                R.id.fireFragment,
+                R.id.plantFragment,
+                R.id.electricFragment
         ).setOpenableLayout(binding.drawerLayout) // Importante para gestionar el icono hamburguesa
                 .build();
 
@@ -43,6 +46,7 @@ public class PokemonActivity extends AppCompatActivity {
 
         // 5. Sincronizamos BottomNavigationView con el NavController
         NavigationUI.setupWithNavController(binding.navigationView, navController);
+
     }
 
     // Método que se ejecuta cuando el usuario pulsa el botón de “navegación superior” de la barra de la app, es decir:

@@ -1,13 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/homeFragment"
-        android:title="Inicio" />
-
+        android:id="@+id/waterFragment"
+        android:icon="@drawable/drop"
+        android:title="@string/option_water" />
     <item
-        android:id="@+id/favoritesFragment"
-        android:title="Favoritos" />
-
+        android:id="@+id/fireFragment"
+        android:icon="@drawable/flame"
+        android:title="@string/option_fire" />
     <item
-        android:id="@+id/profileFragment"
-        android:title="Perfil" />
+        android:id="@+id/plantFragment"
+        android:icon="@drawable/leaf"
+        android:title="@string/option_grass" />
+    <item
+        android:id="@+id/electricFragment"
+        android:icon="@drawable/bolt"
+        android:title="@string/option_electric" />
 </menu>
